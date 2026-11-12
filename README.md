@@ -9,7 +9,7 @@ A dark, luxury restaurant landing page built with HTML, CSS and Vanilla JavaScri
 - JavaScript: hamburger menu, modal popup, form validation, hero slider, menu tabs built with the DOM, review slider, number counters, scroll reveal
 
 ## Live website
-GitHub Pages: (https://elhammohmand2006-stack.github.io/Saffron-table/)
+GitHub Pages: (add your link here)
 
 ## Images
 Photos are loaded from Unsplash by online link.

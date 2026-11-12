@@ -119,7 +119,7 @@ ul { list-style: none; }
 
 .hero::after {  /* dark side so the text is readable */
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(10, 8, 7, 0.88) 0%, rgba(10, 8, 7, 0.35) 60%, rgba(10, 8, 7, 0.1) 100%);
+  background: linear-gradient(180deg, rgba(10, 8, 7, 0.75) 0%, rgba(10, 8, 7, 0) 25%), linear-gradient(90deg, rgba(10, 8, 7, 0.88) 0%, rgba(10, 8, 7, 0.35) 60%, rgba(10, 8, 7, 0.1) 100%);
   pointer-events: none;
 }
 
@@ -239,7 +239,7 @@ ul { list-style: none; }
 .features + .btn { margin-top: 30px; }
 
 /* ---------- Reviews ---------- */
-.review-box { position: relative; max-width: 700px; margin: 40px auto 0; text-align: center; min-height: 230px; }
+.review-box { position: relative; max-width: 700px; margin: 40px auto 0; text-align: center; min-height: 190px; }
 .review { position: absolute; inset: 0 0 50px; opacity: 0; transform: translateY(20px); transition: opacity 0.8s, transform 0.8s; }
 .review.active { opacity: 1; transform: none; }
 .review p { font-family: "Playfair Display", serif; font-size: clamp(1.2rem, 3vw, 1.7rem); line-height: 1.5; }
@@ -340,4 +340,15 @@ input[type="date"] { color-scheme: dark; }
 /* backdrop-filter would trap the fixed full-screen menu, so mobile uses a solid color */
 @media (max-width: 700px) {
   .header.scrolled { backdrop-filter: none; background: var(--black); }
+}
+
+/* browser autofill should keep the dark style */
+input:-webkit-autofill, textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #151110 inset;
+  -webkit-text-fill-color: #f3ead9;
+  caret-color: #f3ead9;
+}
+
+@media (max-width: 700px) {
+  .review-box { min-height: 270px; }
 }
