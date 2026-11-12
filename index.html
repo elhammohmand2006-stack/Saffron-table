@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saffron Table - fine dining with fire, saffron and slow evenings.">
+  <title>Saffron Table | Fine Dining Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+  <div class="glow" id="glow"></div>
+
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#home" class="logo">Saffron Table</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#signature">Signature</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#reserve">Reserve</a></li>
+      </ul>
+
+      <button class="btn btn-small" id="openModal">Book a table</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: image slider -->
+    <section class="hero" id="home">
+      <div class="slides" id="slides">
+        <div class="slide active"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=75" alt="Seared dish plated with a sauce on a white plate"></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1800&q=75" alt="Warm candle-lit dining room of the restaurant"></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1800&q=75" alt="Grilled steak served with fresh vegetables"></div>
+      </div>
+      <div class="gold-dust" id="goldDust" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="tag">Fine dining since 2014</p>
+        <h1 id="heroTitle">Fire, Saffron &amp; Slow Evenings</h1>
+        <p class="hero-text">Seasonal dishes cooked over open flame and served with patience.</p>
+        <button class="btn" id="heroBtn">Reserve your evening</button>
+      </div>
+
+      <div class="slider-controls">
+        <button class="arrow" id="prevSlide" aria-label="Previous photo">&#8249;</button>
+        <div class="dots" id="dots"></div>
+        <button class="arrow" id="nextSlide" aria-label="Next photo">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- MOVING PHOTO STRIPS -->
+    <section class="strips" aria-label="Photos of our dishes">
+      <div class="track">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=70" alt="Table full of fresh dishes">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=70" alt="Hot pizza with melted cheese">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=70" alt="Fresh salad bowl">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=70" alt="Small desserts in glasses">
+        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=500&q=70" alt="Pasta served in a bowl">
+      </div>
+      <div class="track reverse">
+        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=70" alt="Fish dish with garnish">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=500&q=70" alt="Toast with egg and greens">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=70" alt="Chocolate cake">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=70" alt="Glasses of red wine on a table">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=70" alt="Slow-cooked meat with sides">
+      </div>
+    </section>
+
+    <!-- SIGNATURE -->
+    <section class="section split" id="signature">
+      <div class="text reveal">
+        <p class="tag">Chef's signature</p>
+        <h2>Creations born over open flame</h2>
+        <p>Every morning our chef visits the market and builds the day's menu around what is freshest. Saffron from Herat, herbs from our own garden, and nothing rushed.</p>
+        <div class="stats">
+          <div><strong class="count" data-target="12">0</strong><span>years of cooking</span></div>
+          <div><strong class="count" data-target="48">0</strong><span>seasonal dishes</span></div>
+          <div><strong class="count" data-target="9000">0</strong><span>happy guests</span></div>
+        </div>
+        <button class="btn" id="signatureBtn">See the menu</button>
+      </div>
+      <div class="frame reveal">
+        <img class="img-reveal parallax" src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=75" alt="Elegant plated dish with herbs and a glass of wine">
+      </div>
+    </section>
+
+    <!-- MENU (built with JavaScript) -->
+    <section class="section menu" id="menu">
+      <div class="center reveal">
+        <p class="tag">Our menu</p>
+        <h2>Pick a course</h2>
+        <div class="tabs" id="tabs" role="tablist">
+          <button class="tab active" data-cat="starters">Starters</button>
+          <button class="tab" data-cat="mains">Mains</button>
+          <button class="tab" data-cat="desserts">Desserts</button>
+        </div>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section split reverse" id="experience">
+      <div class="frame reveal">
+        <img class="img-reveal parallax" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=75" alt="Dining room with warm lights and set tables">
+      </div>
+      <div class="text reveal">
+        <p class="tag">The experience</p>
+        <h2>A table that feels like an evening away</h2>
+        <ul class="features">
+          <li><h3>Open kitchen</h3><p>Watch your dish meet the fire.</p></li>
+          <li><h3>Wine pairing</h3><p>A glass chosen for every course.</p></li>
+          <li><h3>Private room</h3><p>Space for up to twelve guests.</p></li>
+        </ul>
+        <button class="btn" id="experienceBtn">Reserve a table</button>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="center reveal">
+        <p class="tag">Guest words</p>
+        <h2>What our guests say</h2>
+      </div>
+      <div class="review-box reveal" id="reviewBox">
+        <article class="review active">
+          <p>"The steak was perfect and the service was so kind. We stayed three hours and did not notice."</p>
+          <h3>Sara</h3>
+        </article>
+        <article class="review">
+          <p>"My family loves this place. The pasta is the best I have ever had."</p>
+          <h3>Ahmad</h3>
+        </article>
+        <article class="review">
+          <p>"Warm lights, great wine and a chocolate cake I still think about."</p>
+          <h3>Maryam</h3>
+        </article>
+        <div class="dots" id="reviewDots"></div>
+      </div>
+    </section>
+
+    <!-- RESERVE / CONTACT -->
+    <section class="section reserve" id="reserve">
+      <div class="center reveal">
+        <p class="tag">Reservations</p>
+        <h2>Save your table</h2>
+      </div>
+
+      <form id="contactForm" class="reveal" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <small class="error" id="nameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <small class="error" id="emailError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+            <small class="error" id="dateError"></small>
+          </div>
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="6">6 guests</option>
+              <option value="8">8 or more</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about the occasion or any allergies"></textarea>
+          <small class="error" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn">Send reservation</button>
+        <p class="success" id="formSuccess"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="logo">Saffron Table</p>
+    <p>Open every day: 10:00 AM - 11:00 PM</p>
+    <p>&copy; 2026 Saffron Table. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal" aria-label="Close">&times;</button>
+      <h2>Book a table</h2>
+      <p>Call us at <strong>+1 234 567 890</strong></p>
+      <p>Open every day: 10:00 AM - 11:00 PM</p>
+      <button class="btn" id="modalReserve">Or use the form</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
